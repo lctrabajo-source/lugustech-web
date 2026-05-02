@@ -3,52 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Castilla | MarTech Engineer & Tech Architect</title>
+    <title>Luis Castilla | Tech Lead & MarTech Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #0b1120 0%, #004a7c 100%); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: linear-gradient(135deg, #004a7c 0%, #002a45 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <!-- Navegación -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <!-- Header con Logo -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <span class="font-bold tracking-tighter text-xl">LUGUSTECH</span>
+				<span class="font-bold tracking-tighter text-xl">LUGUSTECH</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <a href="#experiencia" class="hover:text-blue-600 transition">Trayectoria</a>
-                <a href="#apps" class="hover:text-blue-600 transition">Proyectos Propios</a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
+                <a href="#experiencia" class="hover:text-blue-600 px-5 py-2 transition">Trayectoria</a>
+                <a href="#apps" class="hover:text-blue-600 px-5 py-2 transition">Mis Apps</a>
                 <a href="#contacto" class="text-blue-600 border border-blue-600 px-4 py-2 rounded-full hover:bg-blue-50 transition">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero: Perfil Senior -->
-    <header class="hero-gradient text-white py-28 px-6">
-        <div class="max-w-5xl mx-auto">
-            <span class="text-blue-400 font-mono mb-4 block tracking-widest uppercase text-sm">Senior Software Engineer & Tech Leader</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">Luis Gustavo Castilla</h1>
-            <p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl font-light">
-                Más de <span class="text-white font-semibold">10 años de experiencia</span> transformando requerimientos en arquitecturas robustas. 
-                Experto en <span class="text-blue-300">Java</span> y especialista en <span class="text-blue-300">MarTech Ecosystems</span>.
+    <!-- Hero: Perfil Profesional -->
+    <header class="hero-gradient text-white py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Luis Gustavo Castilla Ramos</h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-8 font-light leading-relaxed">
+                Más de 10 años de experiencia transformando requerimientos en arquitecturas robustas.
             </p>
-            <div class="flex flex-wrap gap-4">
-                <div class="glass px-6 py-3 rounded-2xl text-sm font-medium">Líder Técnico @ Integratel</div>
-                <div class="glass px-6 py-3 rounded-2xl text-sm font-medium">Arquitecto @ PANGEA</div>
-                <div class="glass px-6 py-3 rounded-2xl text-sm font-medium">MarTech @ BCP io</div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 text-sm">Java & JS Expert</span>
+                <span class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 text-sm">Azure & Cloud</span>
+                <span class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 text-sm">Scrum & Agile Leadership</span>
+				<span class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 text-sm">Martech</span>
             </div>
         </div>
     </header>
 
-    <!-- Proyectos de Estado / NTT DATA -->
-    <section id="experiencia" class="py-24 px-6">
+    <!-- Sección de Aplicaciones Propias (Prototipo Quantum Shredder) -->
+    <section id="apps" class="py-20 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-black mb-16 uppercase tracking-tighter italic">Impacto Institucional</h2>
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-1 w-12 bg-blue-600"></div>
+                <h2 class="text-3xl font-bold uppercase tracking-tighter">Propiedad Intelectual & Labs</h2>
+            </div>
             
+            <div class="grid md:grid-cols-1 gap-12">
+                <!-- Quantum Shredder Showcase -->
+                <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row">
+                    <div class="md:w-1/2 bg-slate-900 p-12 flex flex-col justify-center text-white">
+                        <div class="mb-4 text-blue-400 font-mono text-sm tracking-widest uppercase">Proprietary Software</div>
+                        <h3 class="text-4xl font-bold mb-6 italic tracking-tight">Quantum Shredder</h3>
+                        <p class="text-slate-400 mb-8 leading-relaxed text-lg">
+                            Una solución avanzada de sanitización de datos y optimización de archivos de sistema. 
+                            Diseñada para entornos que requieren máxima privacidad y eliminación segura de metadatos.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500"></i> Algoritmos de borrado multinivel</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500"></i> Optimización de registro y telemetría</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500"></i> Arquitectura ligera y segura</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 bg-slate-100 flex items-center justify-center p-8">
+                        <!-- Representación Visual del Prototipo -->
+                        <div class="w-full max-w-sm aspect-square bg-white shadow-2xl rounded-2xl border border-slate-300 p-6 flex flex-col">
+                            <div class="flex justify-between items-center mb-10">
+                                <div class="h-3 w-3 rounded-full bg-red-400 shadow"></div>
+                                <div class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">System Optimizer v1.0</div>
+                            </div>
+                            <div class="flex-grow flex flex-col items-center justify-center">
+                                <div class="w-32 h-32 rounded-full border-4 border-blue-500 border-t-transparent animate-spin mb-6"></div>
+                                <div class="text-2xl font-bold tracking-tighter">SHREDDING...</div>
+                                <div class="text-xs text-slate-400 mt-2">SECURE DATA ERASE IN PROGRESS</div>
+                            </div>
+                            <div class="mt-10 h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-600 w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trayectoria y Clientes[cite: 1] -->
+    <section id="experiencia" class="bg-slate-100 py-20 px-6">
+        <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12">
                 <!-- NTT DATA Group -->
                 <div>
@@ -57,7 +100,7 @@
                     </h3>
                     <ul class="space-y-6">
                         <li class="border-l-2 border-slate-200 pl-6">
-                            <h4 class="font-bold">Integratel (Telefónica)</h4>
+                            <h4 class="font-bold">INTEGRATEL (Telefónica)</h4>
                             <p class="text-sm text-slate-500 italic">Tech Lead</p>
                         </li>
                         <li class="border-l-2 border-slate-200 pl-6">
@@ -65,7 +108,7 @@
                             <p class="text-sm text-slate-500 italic">Solution Architect</p>
                         </li>
                         <li class="border-l-2 border-slate-200 pl-6">
-                            <h4 class="font-bold">BCP (io)</h4>
+                            <h4 class="font-bold">IO (BCP)</h4>
                             <p class="text-sm text-slate-500 italic">MarTech Engineer</p>
                         </li>
                     </ul>
@@ -74,76 +117,87 @@
                 <!-- Public Sector Group -->
                 <div>
                     <h3 class="text-red-600 font-bold mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-building-shield"></i> Government & Security
+                        <i class="fa-solid fa-building-shield"></i> Government Experience
                     </h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white border p-4 rounded-xl text-xs font-bold shadow-sm">DIRANDRO PNP</div>
-                        <div class="bg-white border p-4 rounded-xl text-xs font-bold shadow-sm">LAVADO DE ACTIVOS</div>
-                        <div class="bg-white border p-4 rounded-xl text-xs font-bold shadow-sm">SIS (Salud)</div>
-                        <div class="bg-white border p-4 rounded-xl text-xs font-bold shadow-sm">QALIWARMA</div>
-                        <div class="bg-white border p-4 rounded-xl text-xs font-bold shadow-sm">CENARES</div>
-                        <div class="bg-white border p-4 rounded-xl text-xs font-bold shadow-sm">BOMBEROS VOLUNTARIOS</div>
+                    <div class="grid grid-cols-3 gap-4">
+						<div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">MIDAGRI</h4>
+							<p class="text-sm text-slate-500 italic">Ministerio de Agricultura</p>
+						</div>
+                        <div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">DIRANDRO</h4>
+							<p class="text-sm text-slate-500 italic">Dirección de inteligencia antidrogas</p>
+						</div>
+                        <div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">DIRILA</h4>
+							<p class="text-sm text-slate-500 italic">Dirección de lavado de activos</p>
+						</div>
+						<div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">MIMP</h4>
+							<p class="text-sm text-slate-500 italic">Ministerio de la mujer y poblaciones vulnerables</p>
+						</div>
+                        <div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">SIS</h4>
+							<p class="text-sm text-slate-500 italic">Seguro integral de Salud</p>
+						</div>
+						<div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">CENARES</h4>
+							<p class="text-sm text-slate-500 italic">Centro Nacional de Abastecimiento de Recursos Estratégicos en Salud</p>
+						</div>
+						<div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">ESSALUD</h4>
+							<p class="text-sm text-slate-500 italic">Seguro Social de Salud</p>
+						</div>
+                        <div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">QALIWARMA</h4>
+							<p class="text-sm text-slate-500 italic">Programa Nacional de Alimentación Escolar del Ministerio de Desarrollo e Inclusión Social</p>
+						</div>
+						<div class="bg-white border p-4 rounded-xl text-xs text-center shadow-sm">
+							<h4 class="font-bold">CGBVP</h4>
+							<p class="text-sm text-slate-500 italic">Bomberos voluntarios del Perú</p>
+						</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- App Spotlight: Quantum Shredder -->
-    <section id="apps" class="bg-slate-900 py-24 px-6 text-white overflow-hidden">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <div class="md:w-1/2">
-                <div class="inline-block bg-blue-600 text-[10px] font-bold px-3 py-1 rounded mb-6 tracking-widest uppercase">Proprietary Software</div>
-                <h2 class="text-5xl font-black mb-6 tracking-tighter">QUANTUM <span class="text-blue-500 underline decoration-4">SHREDDER</span></h2>
-                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                    Aplicación de alta ingeniería diseñada para la optimización crítica del sistema y sanitización de datos. 
-                    Desarrollada bajo estándares de seguridad para eliminar rastros de telemetría y metadatos sensibles.
-                </p>
-                <div class="flex gap-6 text-sm">
-                    <div class="flex items-center gap-2 text-blue-400"><i class="fa-solid fa-shield-halved"></i> Borrado Seguro</div>
-                    <div class="flex items-center gap-2 text-blue-400"><i class="fa-solid fa-bolt"></i> Optimización Kernel</div>
-                </div>
-            </div>
+    <!-- Formulario de Contacto Funcional -->
+    <section id="contacto" class="py-24 px-6 bg-white">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">¿Hablamos de Proyectos?</h2>
+            <p class="text-slate-500 mb-12">Consultorias de desarrollo para soluciones críticas.</p>
             
-            <!-- Prototipo Visual Animado -->
-            <div class="md:w-1/2 relative">
-                <div class="bg-white/5 border border-white/10 p-10 rounded-3xl backdrop-blur-xl shadow-2xl">
-                    <div class="flex justify-between mb-12">
-                        <div class="flex gap-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <span class="text-[10px] font-mono text-slate-500">QUANTUM_SYS_v1.0.4</span>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-blue-500 w-[65%] animate-pulse"></div>
-                        </div>
-                        <p class="font-mono text-xs text-blue-400">ANALYZING CLUSTERS...</p>
-                        <div class="mt-8 grid grid-cols-3 gap-2">
-                            <div class="h-12 bg-white/5 border border-white/10 rounded-lg"></div>
-                            <div class="h-12 bg-white/5 border border-white/10 rounded-lg"></div>
-                            <div class="h-12 bg-white/5 border border-white/10 rounded-lg"></div>
-                        </div>
-                    </div>
+            <form action="https://formspree.io/f/maqvqnwy" method="POST" class="space-y-4 text-left">
+                <!-- Campo de Email -->
+                <div>
+                    <label class="block text-[10px] font-bold uppercase mb-2 text-slate-400 tracking-[0.2em]">Tu Correo Electrónico</label>
+                    <input type="email" name="email" placeholder="ejemplo@correo.com" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition duration-300" required>
                 </div>
+                
+                <!-- Campo de Mensaje -->
+                <div>
+                    <label class="block text-[10px] font-bold uppercase mb-2 text-slate-400 tracking-[0.2em]">Mensaje</label>
+                    <textarea name="message" rows="5" placeholder="Cuéntame sobre tu requerimiento o proyecto..." class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition duration-300" required></textarea>
+                </div>
+
+                <!-- Campo oculto para personalizar el asunto del correo que recibes -->
+                <input type="hidden" name="_subject" value="Nuevo contacto desde LUGUSTECH WEB">
+                
+                <button type="submit" class="w-full bg-[#004a7c] text-white font-bold py-4 rounded-xl hover:bg-[#002a45] transition-all duration-300 shadow-lg uppercase tracking-widest text-sm flex items-center justify-center gap-2">
+                    Enviar Mensaje <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </form>
+            
+            <div class="mt-12 pt-12 border-t border-slate-100 flex justify-center gap-8 text-slate-400">
+                <a href="mailto:Luiscastilla.trabajo@gmail.com" class="hover:text-blue-600"><i class="fa-solid fa-envelope fa-xl"></i></a>
+                <a href="tel:+51972534638" class="hover:text-blue-600"><i class="fa-solid fa-phone fa-xl"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contacto -->
-    <footer id="contacto" class="py-20 px-6 text-center border-t border-slate-200">
-        <h3 class="text-2xl font-bold mb-8">¿Listo para el siguiente nivel técnico?</h3>
-        <div class="flex justify-center gap-6 mb-12">
-            <a href="mailto:Luiscastilla.trabajo@gmail.com" class="bg-slate-900 text-white p-4 rounded-full hover:scale-110 transition shadow-lg">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="https://github.com/lctrabajo-source" class="bg-slate-200 p-4 rounded-full hover:scale-110 transition shadow-lg">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400">Luis Castilla • MarTech Engineer • 2026</p>
+    <footer class="bg-slate-50 py-10 text-center text-[10px] uppercase tracking-widest text-slate-400 border-t border-slate-100">
+        Luis Gustavo Castilla Ramos © 2026 •
     </footer>
 
 </body>
