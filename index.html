@@ -194,6 +194,8 @@
 					<!-- Campo oculto para personalizar el asunto del correo que recibes -->
 					<input type="hidden" name="_subject" value="Nuevo contacto desde LUGUSTECH WEB">
 					
+					<div id="formResponse" class="hidden text-sm font-bold p-4 rounded-xl mb-4 text-center"></div>
+					
 					<button type="submit" class="w-full bg-[#004a7c] text-white font-bold py-4 rounded-xl hover:bg-[#002a45] transition-all duration-300 shadow-lg uppercase tracking-widest text-sm flex items-center justify-center gap-2">
 						Enviar Mensaje <i class="fa-solid fa-paper-plane text-xs"></i>
 					</button>
@@ -221,15 +223,17 @@
 
 		<script>
 			const contactForm = document.getElementById('contactForm');
+			const formResponse = document.getElementById('formResponse');
 
 			contactForm.addEventListener('submit', async function(e) {
-				e.preventDefault(); // Evita la redirección automática
+				e.preventDefault();
 
 				const formData = new FormData(this);
 				const button = this.querySelector('button');
 				const originalButtonText = button.innerHTML;
 
-				// Estado visual de carga
+				// Reset de mensajes previos y estado de carga
+				formResponse.classList.add('hidden');
 				button.disabled = true;
 				button.innerHTML = 'Enviando... <i class="fa-solid fa-spinner animate-spin"></i>';
 
@@ -237,24 +241,24 @@
 					const response = await fetch('https://formspree.io/f/maqvqnwy', {
 						method: 'POST',
 						body: formData,
-						headers: {
-							'Accept': 'application/json'
-						}
+						headers: { 'Accept': 'application/json' }
 					});
 
 					if (response.ok) {
-						// ÉXITO: Mensaje en español y limpiar formulario
-						alert("¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.");
-						contactForm.reset(); 
+						// EXITO
+						formResponse.innerText = "¡Mensaje enviado! Me pondré en contacto contigo pronto.";
+						formResponse.className = "block text-sm font-bold p-4 rounded-xl mb-4 text-center bg-green-100 text-green-700";
+						contactForm.reset(); // LIMPIEZA DE CAMPOS
 					} else {
-						// ERROR DEL SERVIDOR: Mensaje en español
-						alert("Ups! Hubo un problema con el servidor. Por favor, inténtalo más tarde.");
+						// ERROR SERVIDOR
+						formResponse.innerText = "Hubo un error en el servidor. Por favor, intenta más tarde.";
+						formResponse.className = "block text-sm font-bold p-4 rounded-xl mb-4 text-center bg-red-100 text-red-700";
 					}
 				} catch (error) {
-					// ERROR DE RED: Mensaje en español
-					alert("No se pudo enviar el mensaje. Revisa tu conexión a internet.");
+					// ERROR RED
+					formResponse.innerText = "No se pudo conectar. Revisa tu conexión a internet.";
+					formResponse.className = "block text-sm font-bold p-4 rounded-xl mb-4 text-center bg-red-100 text-red-700";
 				} finally {
-					// Restaurar botón
 					button.disabled = false;
 					button.innerHTML = originalButtonText;
 				}
